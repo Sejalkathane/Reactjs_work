@@ -2,11 +2,9 @@
 import "./App.css";
 // import Switch from "./components/Switch";
 import Navbar from "./components/Navbar";
-import TextForm from "./components/TextForm";  
+import TextForm from "./components/TextForm";
 // import About from './components/About';
-import React, { useState } from 'react'
-
-
+import React, { useState } from "react";
 
 // let name="Sejal";
 
@@ -20,60 +18,35 @@ import React, { useState } from 'react'
 //For example: title proptype as a string
 
 function App() {
+  const [mode, setMode] = useState("light");
 
-   const [mode,setMode]=useState('light');
-
-
-   const toogleMode=()=>{
-    if(mode==='light'){
-      setMode('dark');
-      document.body.style.backgroundColor='#060f2d';
+  const toogleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+      document.body.style.backgroundColor = "#060f2d";
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
     }
-    else{
-      setMode('light');
-      document.body.style.backgroundColor='white';
-
-    }
-   }
-
-
+  };
 
   return (
     <>
-      <Navbar title="MY RC" mode={mode} toogleMode={toogleMode}/> 
+      <Navbar title="MY RC" mode={mode} toogleMode={toogleMode} />
 
-       {/* container is a class of bootstrap which make your content into middle  */}
+      {/* container is a class of bootstrap which make your content into middle  */}
       {/* my-3 margin increase */}
-       <div className="container  my-3">
-
-     <TextForm heading="Enter a Text to analyze" mode={mode}/> 
-       {/* <About/>  */}
-       </div> 
+      <div className="container  my-3">
+        <TextForm heading="Enter a Text to analyze" mode={mode} />
+        {/* <About/>  */}
+      </div>
 
       {/* if we not pass any value it write that statment only which is our default value */}
       {/* <Navbar/>   */}
 
-
-
-
       {/* switch add */}
       {/* <Switch/> */}
     </>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /*{ <nav>
       <li>Home</li>

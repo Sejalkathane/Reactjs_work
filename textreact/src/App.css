@@ -37,20 +37,18 @@
   }
 }
 
-
-.blank{
+.blank {
   color: red;
 }
-p{
+p {
   background-color: aquamarine;
 }
 
-
-.text{
+.text {
   font-size: 20px;
 }
 
-.btn{
+.btn {
   background-color: rgb(255, 255, 255);
   border-color: #929292;
   font-size: larger;
@@ -58,12 +56,10 @@ p{
   border-radius: 20px;
 }
 
-
-.btn1:hover{
+.btn1:hover {
   background-color: rgb(234, 255, 73);
-    color: #000000;
-    border-color: #ffd91c ;
-    
-    /* color:#929292; */
-  
+  color: #000000;
+  border-color: #ffd91c;
+  background-image: radial-gradient();
+  /* color:#081d61; */
 }
