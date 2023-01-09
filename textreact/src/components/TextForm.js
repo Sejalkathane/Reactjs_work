@@ -52,7 +52,7 @@ const copy=()=>{
         {/* <label for="myBox" classNameName="form-label">
           Text
         </label> */}
-        <textarea className="form-control p-4 text " onChange={handleOnChange} value={text} style={{backgroundColor:props.mode==='dark'?'#929292':'white',color:props.mode==='dark'?'white':'black'}} id="myBox" rows="9"></textarea>
+        <textarea className="form-control p-4 text " onChange={handleOnChange} value={text} style={{backgroundColor:props.mode==='dark'?'#081d61':'white',color:props.mode==='dark'?'white':'black'}} id="myBox" rows="9"></textarea>
       </div>
       <button type="button" onClick={handleUpClick}  className="btn btn-outline-success p-3 m-3 ">Convert to upperCase</button>
       <button type="button"  onClick={changeLower}  className="btn btn-outline-danger p-3 m-3 ">Convert into lowerCase</button>
@@ -64,10 +64,10 @@ const copy=()=>{
     </div>
     <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
       <h1>Your Text Summary</h1>
-      <p className="text" style={{backgroundColor:props.mode==='dark'?'#929292':'white',color:props.mode==='dark'?'white':'black'}}>{text.split(" ").length} Words,{text.length} character</p>
-  <p className="text" style={{backgroundColor:props.mode==='dark'?'#929292':'white',color:props.mode==='dark'?'white':'black'}}>{0.008*text.split("  ").length} Minutes read</p>
+      <p className="text" style={{backgroundColor:props.mode==='dark'?'#0d2266':'white',color:props.mode==='dark'?'white':'black'}}>{text.split(" ").length} Words,{text.length} character</p>
+  <p className="text"  style={{backgroundColor:props.mode==='dark'?'#0d2266':'white',color:props.mode==='dark'?'white':'black'}}>{0.008*text.split("  ").length} Minutes read</p>
   <h2>Preview</h2>
-  <p className="text"style={{backgroundColor:props.mode==='dark'?'#929292':'white',color:props.mode==='dark'?'white':'black'}}>{text}</p>
+  <p className="text"  style={{backgroundColor:props.mode==='dark'?'#0d2266':'white',color:props.mode==='dark'?'white':'black'}}>{text}</p>
     </div>
     </>
 

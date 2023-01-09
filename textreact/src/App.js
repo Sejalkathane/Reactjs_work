@@ -27,7 +27,7 @@ function App() {
    const toogleMode=()=>{
     if(mode==='light'){
       setMode('dark');
-      document.body.style.backgroundColor='grey';
+      document.body.style.backgroundColor='#060f2d';
     }
     else{
       setMode('light');
