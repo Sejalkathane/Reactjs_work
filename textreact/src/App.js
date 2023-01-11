@@ -41,10 +41,12 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#060f2d";
       showAlert("Dark Mode Enable","success");
+      document.title='TextUtils-Dark Mode';
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       showAlert("Light Mode Enable","success");
+      document.title='TextUtils-Light Mode';
     }
   };
 
