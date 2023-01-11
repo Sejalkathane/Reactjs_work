@@ -7,7 +7,7 @@ import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // import {Routes,Route} from 'react-router-dom'
 // let name="Sejal";
 
@@ -57,14 +57,10 @@ function App() {
         {/* container is a class of bootstrap which make your content into middle  */}
         {/* my-3 margin increase */}
         <div className="container  my-3">
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/">
-              <TextForm showAlert={showAlert}heading="Enter a Text to analyze"mode={mode}/>
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/" element={<TextForm showAlert={showAlert}heading="Enter a Text to analyze"mode={mode}/>}> </Route>
+          </Routes>
         </div>
       </Router>
 
