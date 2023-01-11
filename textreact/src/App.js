@@ -3,7 +3,7 @@ import "./App.css";
 // import Switch from "./components/Switch";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-// import About from './components/About';
+import About from './components/About';
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 
@@ -58,7 +58,7 @@ function App() {
       {/* my-3 margin increase */}
       <div className="container  my-3">
         <TextForm showAlert={showAlert} heading="Enter a Text to analyze" mode={mode} />
-        {/* <About/>  */}
+        <About/> 
       </div>
 
       {/* if we not pass any value it write that statment only which is our default value */}
