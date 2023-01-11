@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 // import About from './components/About';
 import React, { useState } from "react";
+import Alert from "./components/Alert";
 
 // let name="Sejal";
 
@@ -19,25 +20,42 @@ import React, { useState } from "react";
 
 function App() {
   const [mode, setMode] = useState("light");
+  
+  const[alert,setAlert]=useState(null);
 
-  const toogleMode = () => {
+  
+  const showAlert=(message,type)=>{
+     setAlert({
+      msg:message,
+      type:type
+     })
+
+     setTimeout(()=>{
+      setAlert(null);
+     },1500);
+  }
+
+
+  const toogleMode =  () => {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#060f2d";
+      showAlert("Dark Mode Enable","success");
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
+      showAlert("Light Mode Enable","success");
     }
   };
 
   return (
     <>
       <Navbar title="MY RC" mode={mode} toogleMode={toogleMode} />
-
+      <Alert alert={alert}/>
       {/* container is a class of bootstrap which make your content into middle  */}
       {/* my-3 margin increase */}
       <div className="container  my-3">
-        <TextForm heading="Enter a Text to analyze" mode={mode} />
+        <TextForm showAlert={showAlert} heading="Enter a Text to analyze" mode={mode} />
         {/* <About/>  */}
       </div>
 

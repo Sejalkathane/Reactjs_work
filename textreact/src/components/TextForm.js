@@ -7,6 +7,7 @@ export default function TextForm(props) {
     console.log("Uppercase click");
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Convert to Uppercase","success");
   };
 
   const handleOnChange = (event) => {
@@ -18,23 +19,26 @@ export default function TextForm(props) {
     console.log("Change it to lower");
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Convert to LowerCase","success");
   };
 
   const clear = () => {
     let newText = " ";
     setText(newText);
+    props.showAlert("You Clear All Text","success");
   };
 
   const Slice = () => {
     let newText = text.slice(0, -1);
-
     setText(newText);
+    props.showAlert("You Slice one letter","success");
   };
 
   const copy = () => {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("You Copy Text","success");
   };
 
   return (
