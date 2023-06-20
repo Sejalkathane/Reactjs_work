@@ -1,0 +1,10 @@
+.date{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    background-color: rgb(10, 8, 90);
+    border-radius: 10px;
+    padding: 4px;
+   
+}

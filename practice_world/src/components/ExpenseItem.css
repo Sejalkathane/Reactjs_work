@@ -1,0 +1,79 @@
+body{
+    background-color: rgb(22, 163, 168);
+}
+.Item{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow:0px 0px 10px 4px rgb(0, 200, 226);
+   padding: 0.5rem;
+   margin: 1rem 0;
+   border-radius: 20px;
+   background-color: rgb(41, 27, 118);
+   margin-bottom: 20px;
+}
+
+
+.material{
+    display: flex;
+    flex-wrap: column;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+    /* justify-content: flex-start; */
+    flex: 1;
+}
+
+.material h2{
+
+    font-size: 2rem;
+    flex:1 ;
+    margin:10px;
+    color: rgb(249, 253, 0);
+    background-color: rgb(2, 39, 72);
+    border-radius: 10px;
+    padding: 2px ;
+}
+@media (min-width:500px){
+    material{
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+    }
+}
+
+
+.price{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(255, 0, 144);
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    padding: 7px;
+}
+
+button{
+   color: rgb(0, 0, 0);
+   /* width: 100px; */
+   font-size: 20px;
+   border-radius: 10px;
+   padding: 10px;
+   margin: 30px;
+   background-color: rgb(255, 230, 0);
+   border: none;
+   box-shadow: 2px 2px 35px 3px rgb(0, 255, 255);
+   font-weight: bold;
+   font-family:cursive;
+   cursor: pointer;
+   border:  2px solid rgb(255, 255, 255);
+}
+
+button:hover{
+    box-shadow:inset 2px 2px 35px 3px rgb(255, 255, 255);
+    border:  2px solid rgb(0, 0, 0);
+    color: black;
+    background-color: rgb(255, 0, 68);
+
+}
